@@ -1,0 +1,62 @@
+leon@Air-von-leon ~ % cd 12-morning
+leon@Air-von-leon 12-morning % git checkout -b "feature"
+Switched to a new branch 'feature'
+leon@Air-von-leon 12-morning % git add .
+leon@Air-von-leon 12-morning % git commit -m "first commit"
+[feature 83a935f] first commit
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+leon@Air-von-leon 12-morning % git push origin feature
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 307 bytes | 307.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/leon-afanasenko/12-morning/pull/new/feature
+remote: 
+To https://github.com/leon-afanasenko/12-morning.git
+ * [new branch]      feature -> feature
+leon@Air-von-leon 12-morning % 
+leon@Air-von-leon 12-morning % 
+leon@Air-von-leon 12-morning % 
+leon@Air-von-leon 12-morning % git commit --amend 
+hint: Waiting for your editor to close the file... error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+leon@Air-von-leon 12-morning % git commit --amend
+[feature 95343e1] first commit ammend
+ Date: Mon Jun 17 17:01:18 2024 +0200
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+leon@Air-von-leon 12-morning % git push origin feature
+To https://github.com/leon-afanasenko/12-morning.git
+ ! [rejected]        feature -> feature (non-fast-forward)
+error: failed to push some refs to 'https://github.com/leon-afanasenko/12-morning.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+leon@Air-von-leon 12-morning % git push origin feature --force
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 318 bytes | 318.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/leon-afanasenko/12-morning.git
+ + 83a935f...95343e1 feature -> feature (forced update)
+leon@Air-von-leon 12-morning % 
+leon@Air-von-leon 12-morning % 
+leon@Air-von-leon 12-morning % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+leon@Air-von-leon 12-morning % git merge feature
+Updating 7530fd7..95343e1
+Fast-forward
+ README.md | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+leon@Air-von-leon 12-morning % git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/leon-afanasenko/12-morning.git
+   7530fd7..95343e1  main -> main
+leon@Air-von-leon 12-morning % 
